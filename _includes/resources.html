@@ -1,0 +1,23 @@
+{% assign keywordsList = '' | split:'' %}
+{% for resource in site.data.resources %}
+  {% assign keywords = resource.keywords | split:' ' %}
+  {% assign keywordsList = keywordsList | concat: keywords | uniq %}
+{% endfor %}
+<form class="keywords">
+  <input style="display:none;" type="text" name="possibleValues" value="{{ keywordsList | join: " " }}">
+  {% for cat in keywordsList %}
+    <label class="keyword">
+      <input class="keywordIn" type="checkbox" name="{{ cat }}" checked>
+        {{ cat | capitalize }}
+    </label><br>
+  {% endfor %}
+</form>
+<br>
+{% for resource in site.data.resources %}
+    <section class="card resource {{ resource.keywords }}">
+        <a target="_blank" href="{{ resource.link }}">
+          <h1>{{ resource.title }}</h1>
+        </a>
+        <p>{{ resource.description || "<br>"}}</p>
+    </section>
+{% endfor %}
