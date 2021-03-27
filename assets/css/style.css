@@ -370,7 +370,7 @@ main.home{
 section.full{
   height:100vh;
 }
-.home section.full.title{
+section.full.title{
   display: flex;
   flex-flow: column;
   justify-content: space-around;
@@ -435,7 +435,6 @@ section.halfimg > div:first-child{
   padding: 2vw;
 }
 .home section:first-child{
-  background: url("/assets/images/default.jpg") no-repeat top center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

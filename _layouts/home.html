@@ -1,6 +1,24 @@
----
-layout: default
----
-<main class="home">
-  {{ content }}
-</main>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    {% include head.html %}
+  </head>
+  <body>
+    <main class="home">
+      <section class="full title" style="background-image: url({{ page.image }})">
+        <h1>Kill&#8239;The&#8239;Bill</h1>
+        <p>
+          <a href="#resources"><button type="button" name="button"><h3>Resources</h3></button></a>
+        </p>
+      </section>
+
+    </main>
+    {% include nav.html %}
+    <main>
+      <article>
+        {{ content }}
+      </article>
+    </main>
+    {% include footer.html %}
+  </body>
+</html>

@@ -21,8 +21,7 @@
 title: Kill the Bill
 email: killthebill@bicycle.ga
 description: >- # this means to ignore newlines until "baseurl:"
-  Just a compiled list of resources around the new authoritarian measures
-  that are being psuhed through parliament in 2020.
+  Resources about PCSC Bill 2021
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
@@ -33,6 +32,13 @@ permalink: pretty
 # Build settings
 plugins:
   - jekyll-feed
+
+# Default page values
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/images/default.jpg
 
 # SEO
 locale: en_GB
