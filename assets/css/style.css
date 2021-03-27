@@ -19,6 +19,7 @@
   --transition: 0.3s;
   --block-font:'Bebas Neue','Amatic SC', cursive,sans-serif;
   --small-font:sans-serif;
+  --mobile-max: 500px;
 }
 :nth-child(1){--nth:1;}
 :nth-child(2){--nth:2;}
@@ -538,6 +539,28 @@ section.card .info{
 }
 section.card h1{
   font-size: min(30px,11vw);
+}
+
+/* News cards */
+@media only screen and (min-width: 500px){
+  section.card.news{
+    display: flex;
+  }
+  section.card.news > img{
+    max-height: 200px;
+    height:auto;
+    width:auto;
+  }
+}
+@media only screen and (max-width: 500px){
+  section.card.news > img{
+    max-height: 100%;
+    width:100%;
+  }
+}
+
+section.card.news > .content{
+  padding-left: 3vw;
 }
 
 section.event-links{
