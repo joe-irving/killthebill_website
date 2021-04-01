@@ -1,6 +1,8 @@
 - name: Home
   link: /
 - name: Resources
-  link: /#resources
-# - name: news
-#   link: /news/
+  link: /resources/
+- name: News
+  link: /news/
+- name: Protest Map
+  link: /map/
