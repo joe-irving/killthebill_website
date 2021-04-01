@@ -7,14 +7,19 @@
 }
 :root {
   --bg-r: 129;
---bg-g: 16;
---bg-b: 107;
+  --bg-g: 16;
+  --bg-b: 107;
   --i-bg-r: calc(255 - var(--bg-r));
   --i-bg-g: calc(255 - var(--bg-g));
   --i-bg-b: calc(255 - var(--bg-b));
+  /* --i-bg-r: 0;
+  --i-bg-g: 0;
+  --i-bg-b: 0; */
   --bg-color: rgb(var(--bg-r),var(--bg-g),var(--bg-b));
   --accent-color: rgb(var(--i-bg-r),var(--i-bg-g),var(--i-bg-b));
+  /* --accent-color: black; */
   --fg-color: rgba(255,255,255,0.9);
+  /* --fg-color: var(--accent-color) */
   --min-menu-size: 300px; /* currently relies on manual input */
   --transition: 0.3s;
   --block-font:'Bebas Neue','Amatic SC', cursive,sans-serif;
@@ -284,6 +289,18 @@ article{
   margin: 0 auto;
   max-width: var(--max-width);
   overflow: hidden;
+}
+/* Map page */
+body.map{
+  display: flex;
+  flex-direction: column;
+  height: 99vh;
+}
+body.map > section{
+  flex-grow: 5;
+}
+body.map > nav{
+  height: 2.5em;
 }
 /* Article formatting */
 input[type="submit"], button{

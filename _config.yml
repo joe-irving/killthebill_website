@@ -21,7 +21,7 @@
 title: Kill the Bill
 email: killthebill@bicycle.ga
 description: >- # this means to ignore newlines until "baseurl:"
-  Resources about PCSC Bill 2021
+  Resources, news and info about PCSC Bill 2021 Protests
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.killthebill.ga" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
@@ -39,7 +39,7 @@ defaults:
   - scope:
       path: ""
     values:
-      image: /assets/images/default.jpg
+      image: /assets/images/wewontbesilenced_og.jpg
 
 # SEO
 locale: en_GB

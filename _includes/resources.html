@@ -1,5 +1,6 @@
 {% assign keywordsList = '' | split:'' %}
-{% for resource in site.data.resources %}
+{% assign resources = site.data.resources | reverse %}
+{% for resource in resources %}
   {% assign keywords = resource.keywords | split:' ' %}
   {% assign keywordsList = keywordsList | concat: keywords | uniq %}
 {% endfor %}
@@ -13,7 +14,7 @@
   {% endfor %}
 </form>
 <br>
-{% for resource in site.data.resources %}
+{% for resource in resources %}
     <section class="card resource {{ resource.keywords }}">
         <a target="_blank" href="{{ resource.link }}">
           <h1>{{ resource.title }}</h1>

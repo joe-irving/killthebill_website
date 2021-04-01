@@ -19,7 +19,10 @@
         </svg>
       </a>
     {% for item in site.data.nav %}
-      <li><a href="{{ item.link }}" {% if page.url == item.link %} class="current-page" {% endif %}>
+      <li><a href="{{ item.link }}"
+        {% if page.url == item.link %} class="current-page" {% endif %}
+        {% if page.target %} target="{{ page.target }}" {% endif %}
+        >
         {{ item.name }}</a>
         {% if item.pages %}
           <ul>
